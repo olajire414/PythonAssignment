@@ -1,6 +1,6 @@
-#collect input player 1 & player 2
+#collect input from player 1 & player 2
 #invoke if statement
-#compare parameters player 1 & 2
+#compare  player 1 & 2 inputs
 #print outcomes
 
 
@@ -10,10 +10,22 @@ player1 = input("enter one of the  options: ")
 
 player2 = input("enter one of the options: ")
 
-if player1 == "rock" or player1 == "paper" or player1 == "scissors":
+if player1 == "rock" and player2 == "scissors":
     print("Player 1 wins")
     
-if player2 == "rock" or player2 == "paper" or player2 == "scissors":
+elif player1 == "rock" and player2 == "paper":
+    print("Player 2 wins")
+
+elif player1 == "paper" and player2 == "rock":
+    print("Player 1 wins")
+
+elif player1 == "paper" and player2 == "scissors":
+    print("Player 2 wins")
+
+elif player1 == "scissors" and player2 == "paper":
+    print("Player 1 wins")
+
+elif player1 == "scissors" and player2 == "rock":
     print("Player 2 wins")
     
 else:

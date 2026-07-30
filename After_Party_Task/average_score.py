@@ -14,16 +14,16 @@ while counter < 3:
     if 90 <= score <= 100:
         print("You got A")
   
-    elif 80 <= score <= 90:
+    elif 80 <= score <= 89:
         print("You got B")
   
-    elif 70 <= score <= 80:
+    elif 70 <= score <= 79:
         print("You got C")
  
-    elif 60 <= score <=70:
+    elif 60 <= score <=69:
         print("You got D")
  
-    elif 0 <= score <= 60:
+    elif 0 <= score <= 59:
         print("You got F") 
     else:
         print("Bring your parent")

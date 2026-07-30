@@ -1,10 +1,10 @@
-print(" enter 'v' in m/s and 'a' in m/s2  ")
+print(" enter 'velocity' in m/s and 'acceleration' in m/s2  ")
 
-v = float(input("enter v : "))
+velocity = float(input("enter velocity : "))
 
-a = float(input("enter a : "))
+acceleration = float(input("enter acceleration : "))
 
-runway_length = (v **2)/ (2 * a)
+runway_length = (velocity **2)/ (2 * acceleration)
 
 print("runway length is: ",runway_length)
 

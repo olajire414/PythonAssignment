@@ -1,5 +1,10 @@
 
-print("power table")
+print("power table") 
+
+for number in range(1,6):
+print(number)
+
+
 table1  = pow(1, 2)
 print(table1)
 
