@@ -25,7 +25,7 @@ while main_menu != 0:
         case 1:
             print(fuel_dispenser_app.display_board())
 
-            choice = int(input("Choose fuel type/Yes to quit app: "))
+            choice = int(input("Choose fuel type: "))
             if choice < 0 or choice > 5:
                 print("Please enter a valid choice")
             while choice != 0:
