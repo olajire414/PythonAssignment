@@ -43,7 +43,7 @@ while main_menu != 0:
 
                             transaction_history.append(
                                 fuel_dispenser_app.get_all_transaction_history(product, amount, number_of_liters))
-                            print(fuel_dispenser_app.get_receipt(product, amount, number_of_liters, date.today()))
+                            print(fuel_dispenser_app.get_receipt(product, amount, number_of_liters))
 
                         elif user_choice == "amount":
                             amount = float(input("How much petrol are you buying(650/L): "))
@@ -54,7 +54,7 @@ while main_menu != 0:
 
                             transaction_history.append(
                                 fuel_dispenser_app.get_all_transaction_history(product, amount, number_of_liters))
-                            print(fuel_dispenser_app.get_receipt(product, amount, number_of_liters, date.today()))
+                            print(fuel_dispenser_app.get_receipt(product, amount, number_of_liters))
 
                         elif user_choice != "liter" and user_choice != "amount":
                             print("Please enter either liter or amount")
@@ -76,7 +76,7 @@ while main_menu != 0:
 
                             transaction_history.append(
                                 fuel_dispenser_app.get_all_transaction_history(product, amount, number_of_liters))
-                            print(fuel_dispenser_app.get_receipt(product, amount, number_of_liters, date.today()))
+                            print(fuel_dispenser_app.get_receipt(product, amount, number_of_liters))
 
 
                         elif user_choice == "amount":
@@ -88,7 +88,7 @@ while main_menu != 0:
 
                             transaction_history.append(
                                 fuel_dispenser_app.get_all_transaction_history(product, amount, number_of_liters))
-                            print(fuel_dispenser_app.get_receipt(product, amount, number_of_liters, date.today()))
+                            print(fuel_dispenser_app.get_receipt(product, amount, number_of_liters))
 
                         elif user_choice != "liter" and user_choice != "amount":
                             print("Please enter either liter or amount")
@@ -110,7 +110,7 @@ while main_menu != 0:
 
                             transaction_history.append(
                                 fuel_dispenser_app.get_all_transaction_history(product, amount, number_of_liters))
-                            print(fuel_dispenser_app.get_receipt(product, amount, number_of_liters, date.today()))
+                            print(fuel_dispenser_app.get_receipt(product, amount, number_of_liters))
 
 
                         elif user_choice == "amount":
@@ -122,7 +122,7 @@ while main_menu != 0:
 
                             transaction_history.append(
                                 fuel_dispenser_app.get_all_transaction_history(product, amount, number_of_liters))
-                            print(fuel_dispenser_app.get_receipt(product, amount, number_of_liters, date.today()))
+                            print(fuel_dispenser_app.get_receipt(product, amount, number_of_liters))
 
                         elif user_choice != "liter" and user_choice != "amount":
                             print("Please enter either liter or amount")

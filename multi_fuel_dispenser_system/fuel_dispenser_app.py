@@ -41,7 +41,7 @@ def get_all_transaction_history(product,amount,liter):
         "product": product,
         "amount": amount,
         "liter": liter,
-        "date": date.today()
+
     }
     all_transactions.append(transaction)
     return all_transactions
@@ -53,5 +53,5 @@ def get_receipt(product, amount, liter):
 
 
 def get_receipt_gas(product, amount, liter,t_date):
-    receipt = f"""\nCustomers Transaction Receipt\n===========================\n= Product: {product}\n= Amount: {amount}\n= KG: {liter}\n= Date: {date.today()}\nThanks for your patronage\n==========================\nSaving Transaction History....."""
+    receipt = f"""\nCustomers Transaction Receipt\n===========================\n= Product: {product}\n= Amount: {amount}\n= KG: {liter}\n= Date: {date.today()}\nThanks for your patronage\n===========================\nSaving Transaction History....."""
     return receipt

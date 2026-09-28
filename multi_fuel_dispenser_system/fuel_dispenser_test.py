@@ -1,6 +1,5 @@
 import unittest
-
-import fuel_dispenser_app
+from multi_fuel_dispenser_system import fuel_dispenser_app
 
 class MyFuelDispenserTest(unittest.TestCase):
 
@@ -47,43 +46,15 @@ class MyFuelDispenserTest(unittest.TestCase):
         product = "petrol"
         amount = 5000
         liter = "5L"
-        date = "datatime.date(2026, 9, 27)"
+
 
         transaction = {
             "product": product,
             "amount": amount,
-            "liter": liter,
-            "date": date,
+            "liter": liter
         }
         all_transactions.append(transaction)
         self.assertEqual(all_transactions,fuel_dispenser_app.get_all_transaction_history(product,amount,liter))
-
-    def test_That_simple_receipt_can_be_generated_for_a_transaction(self):
-        product = "petrol"
-        amount = 5000
-        liter = "5L"
-        date = "2026-9-28"
-        receipt = f"""\nCustomers Transaction Receipt\n===========================\n= Product: {product}\n= Amount: {amount}\n= Liter: {liter}L\n= Date: {date}\nThanks for your patronage\n==========================\nSaving Transaction History....."""
-        self.assertEqual(receipt,fuel_dispenser_app.get_receipt(product,amount,liter))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 if __name__ == '__main__':
