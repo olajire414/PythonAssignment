@@ -11,7 +11,7 @@ def select_option(option):
 
     match option:
         case 1:"1. Petrol  => 650/Liter"
-        case 2: "2. Diesel  => 720/Liter"
+        case 2:"2. Diesel  => 720/Liter"
         case 3:"3. Kerosene  => 720/Liter"
         case 4:"4. Gas 480  => 720/Liter"
     return option
