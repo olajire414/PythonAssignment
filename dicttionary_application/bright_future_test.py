@@ -43,13 +43,56 @@ class BrightFutureTest(unittest.TestCase):
         self.assertEqual('lagos',display_student_city_of_an_address(student_id))
 
     def test_that_allows_a_student_to_add_a_new_course_not_in_his_course_and_official(self):
-        new_course = 'math'
+        new_course = 'Math'
         age = 21
         name = 'ola'
         courses = {'physics', 'chemistry'}
         address = {'city': 'lagos', 'zip_code': '12345'}
         student_id = {'name': name, 'age': age, 'courses': courses, 'address': address}
-        self.assertEqual('math',add_a_new_course(student_id,new_course))
+        self.assertEqual('Math',add_a_new_course(student_id,new_course))
+
+    def test_that_update_student_course(self):
+        age = 21
+        name = 'ola'
+        courses = {'physics', 'chemistry'}
+        address = {'city': 'lagos', 'zip_code': '12345'}
+        student_id = {'name': name, 'age': age, 'courses': courses, 'address': address}
+        removed_course = student_id['courses'].remove('physics')
+        self.assertEqual(removed_course,update_student_course(student_id,removed_course))
+
+    def test_that_various_fields_can_be_updated(self):
+        age = 21
+        name = 'ola'
+        courses = {'physics', 'chemistry'}
+        address = {'city': 'lagos', 'zip_code': '12345'}
+        student_id = {'name': name, 'age': age, 'courses': courses, 'address': address}
+        expected =(name,age,address['city'],address['zip_code'])
+        self.assertEqual(expected,update_student_fields(student_id,name,age,address['city'],address['zip_code']))
+
+    def test_that_overall_number_of_student_can_be_displayed(self):
+        students = {}
+        age = 21
+        name = 'ola'
+        courses = {'physics', 'chemistry'}
+        address = {'city': 'lagos', 'zip_code': '12345'}
+        student1 = {'name': name, 'age': age, 'courses': courses, 'address': address}
+        student2 = {'name': name, 'age': age, 'courses': courses, 'address': address}
+        students.update({'id_001':student1})
+        students.update({'id_002':student2})
+        expected = len(students)
+
+        self.assertEqual(expected,display_overall_numbers_of_student(students))
+
+
+
+
+
+
+
+
+
+
+
 
 
 
