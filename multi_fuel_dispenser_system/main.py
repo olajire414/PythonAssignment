@@ -1,7 +1,6 @@
 from datetime import date
 import fuel_dispenser_app
 
-transaction_history = []
 
 
 print("*" * 50)
@@ -40,10 +39,9 @@ while main_menu != 0:
                                 print("Please enter between 1 and 50")
                             amount = fuel_dispenser_app.calc_total_cost_with_liter(number_of_liters, cost_per_liter)
 
-
-                            transaction_history.append(
-                                fuel_dispenser_app.get_all_transaction_history(product, amount, number_of_liters))
+                            fuel_dispenser_app.add_transaction(product, amount, number_of_liters)
                             print(fuel_dispenser_app.get_receipt(product, amount, number_of_liters))
+
 
                         elif user_choice == "amount":
                             amount = float(input("How much petrol are you buying(650/L): "))
@@ -51,9 +49,7 @@ while main_menu != 0:
                                 print("Please enter a positive amount")
                             number_of_liters = fuel_dispenser_app.get_fuel_by_amount(amount, cost_per_liter)
 
-
-                            transaction_history.append(
-                                fuel_dispenser_app.get_all_transaction_history(product, amount, number_of_liters))
+                            fuel_dispenser_app.add_transaction(product, amount, number_of_liters)
                             print(fuel_dispenser_app.get_receipt(product, amount, number_of_liters))
 
                         elif user_choice != "liter" and user_choice != "amount":
@@ -74,8 +70,8 @@ while main_menu != 0:
                             amount = fuel_dispenser_app.calc_total_cost_with_liter(number_of_liters, cost_per_liter)
 
 
-                            transaction_history.append(
-                                fuel_dispenser_app.get_all_transaction_history(product, amount, number_of_liters))
+
+                            fuel_dispenser_app.add_transaction(product, amount, number_of_liters)
                             print(fuel_dispenser_app.get_receipt(product, amount, number_of_liters))
 
 
@@ -86,8 +82,8 @@ while main_menu != 0:
                             number_of_liters = fuel_dispenser_app.get_fuel_by_amount(amount, cost_per_liter)
 
 
-                            transaction_history.append(
-                                fuel_dispenser_app.get_all_transaction_history(product, amount, number_of_liters))
+
+                            fuel_dispenser_app.add_transaction(product, amount, number_of_liters)
                             print(fuel_dispenser_app.get_receipt(product, amount, number_of_liters))
 
                         elif user_choice != "liter" and user_choice != "amount":
@@ -108,8 +104,8 @@ while main_menu != 0:
                             amount = fuel_dispenser_app.calc_total_cost_with_liter(number_of_liters, cost_per_liter)
 
 
-                            transaction_history.append(
-                                fuel_dispenser_app.get_all_transaction_history(product, amount, number_of_liters))
+
+                            fuel_dispenser_app.add_transaction(product, amount, number_of_liters)
                             print(fuel_dispenser_app.get_receipt(product, amount, number_of_liters))
 
 
@@ -120,8 +116,8 @@ while main_menu != 0:
                             number_of_liters = fuel_dispenser_app.get_fuel_by_amount(amount, cost_per_liter)
 
 
-                            transaction_history.append(
-                                fuel_dispenser_app.get_all_transaction_history(product, amount, number_of_liters))
+
+                            fuel_dispenser_app.add_transaction(product, amount, number_of_liters)
                             print(fuel_dispenser_app.get_receipt(product, amount, number_of_liters))
 
                         elif user_choice != "liter" and user_choice != "amount":
@@ -142,7 +138,7 @@ while main_menu != 0:
                             amount = fuel_dispenser_app.calc_total_cost_with_liter(number_of_kg, cost_per_liter)
 
 
-                            transaction_history.append(fuel_dispenser_app.get_all_transaction_history(product, amount, number_of_kg))
+                            fuel_dispenser_app.add_transaction(product, amount, number_of_kg)
                             print(fuel_dispenser_app.get_receipt_gas(product, amount, number_of_kg, date.today()))
 
 
@@ -153,8 +149,8 @@ while main_menu != 0:
                             number_of_liters = fuel_dispenser_app.get_fuel_by_amount(amount, cost_per_liter)
 
 
-                            transaction_history.append(
-                                fuel_dispenser_app.get_all_transaction_history(product, amount, number_of_liters))
+
+                            fuel_dispenser_app.add_transaction(product, amount, number_of_liters)
                             print(fuel_dispenser_app.get_receipt_gas(product, amount, number_of_liters, date.today()))
 
                         elif user_choice != "kg" and user_choice != "amount":
@@ -170,7 +166,7 @@ while main_menu != 0:
 
         case 2:
 
-            print(transaction_history)
+            print(fuel_dispenser_app.get_all_transaction_history())
         case 0:
             print("Exiting...")
         case _:

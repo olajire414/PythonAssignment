@@ -3,17 +3,17 @@ from multi_fuel_dispenser_system import fuel_dispenser_app
 
 class MyFuelDispenserTest(unittest.TestCase):
 
-    def test_ihave_display_board_can_display_available_fuel(self):
+    def test_available_fuel_can_be_displayed(self):
         display_fuels = """ \nAvailable Petroleum\n 1. Petrol  => 650/Liter  \n 2. Diesel  => 720/Liter \n 3. Kerosene  => 720/Liter \n 4. Gas 480/Liter """
         self.assertEqual(display_fuels, fuel_dispenser_app.display_board())
 
     def test_that_customers_can_select_options_from_menu(self)->None:
         option = 2
-        match option:
-            case 1: "1. Petrol  => 650/Liter"
-            case 2: "2. Diesel  => 720/Liter"
-            case 3: "3. Kerosene  => 720/Liter"
-            case 4: "4. Gas 480  => 720/Liter"
+        # match option:
+        #     case 1: "1. Petrol  => 650/Liter"
+        #     case 2: "2. Diesel  => 720/Liter"
+        #     case 3: "3. Kerosene  => 720/Liter"
+        #     case 4: "4. Gas 480  => 720/Liter"
 
         self.assertEqual(option, fuel_dispenser_app.select_option(2))
 
